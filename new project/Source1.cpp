@@ -150,28 +150,41 @@ void con_gallons() {
 }
 
 int main() {
+	char answer;
 	cout << "Do you want to convert: \n1. Cups \n2. Pints \n3. Ounces \n4. Liters \n5. Gallons" << endl;
 	cin >> convert;
-
-	switch (convert) {
-	case 1:
-		con_cups();
-		break;
-	case 2:
-		con_pints();
-		break;
-	case 3:
-		con_ounces();
-		break;
-	case 4:
-		con_liters();
-		break;
-	case 5:
-		con_gallons();
-		break;
-	default:
-		cout << "Invalid entry";
-		break;
+	while (true) {
+		switch (convert) {
+		case 1:
+			con_cups();
+			break;
+		case 2:
+			con_pints();
+			break;
+		case 3:
+			con_ounces();
+			break;
+		case 4:
+			con_liters();
+			break;
+		case 5:
+			con_gallons();
+			break;
+		default:
+			cout << "Invalid entry";
+			break;
+		}
+		cout << "Would you like to convert something else? [Y or N]: ";
+		cin >> answer;
+		if (answer == "Y") {
+			continue;
+		}
+		else if (answer == "N") {
+			return;
+		}
+		else {
+			return;
+		}
 	}
 	
 	return 0;
